@@ -1,0 +1,58 @@
+<h2>Detalles de Cliente</h2>
+ <div *ngIf="costumer">
+  <mat-card>
+    <mat-card-title>{{ costumer.name }} {{ costumer.lastName }} {{ costumer.middleName }}</mat-card-title>
+    <mat-card-content>
+      <label><b>Correo Electronico: </b></label> {{ costumer.email }}
+      <br>
+      <label><b>Direccion: </b></label> {{ costumer.address }}
+      <br>
+      <label><b>Telefono: </b></label> {{ costumer.phone }}
+      <br>
+      <label><b>Generación: </b></label> {{ costumer.generation }}
+      <br>
+    </mat-card-content>
+    <mat-card-actions>
+      <button (click)="list()" mat-button>REGRESAR</button>
+      <button (click)="edit()" mat-button>EDITAR</button>
+    </mat-card-actions>
+   </mat-card>
+ </div>
+
+
+
+<!--
+<hr/>
+<div *ngIf="costumer">
+  <div>
+    <label><b>Nombre: </b></label> {{ costumer.name }}
+  </div>
+
+  <div>
+    <label><b>Apellido Paterno: </b></label> {{ costumer.middleName }}
+  </div>
+
+  <div>
+    <label><b>Apellido Materno: </b></label> {{ costumer.lastName }}
+  </div>
+
+  <div>
+    <label><b>Correo Electronico: </b></label> {{ costumer.email }}
+  </div>
+
+  <div>
+    <label><b>Direccion: </b></label> {{ costumer.address }}
+  </div>
+
+  <div>
+    <label><b>Telefono: </b></label> {{ costumer.phone }}
+  </div>
+
+  <div>
+    <label><b>Generación: </b></label> {{ costumer.generation }}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Regresar a lista</button><br> -->

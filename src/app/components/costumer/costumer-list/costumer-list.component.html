@@ -1,0 +1,59 @@
+<table mat-table [dataSource]="costumers" class="mat-elevation-z8">
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Nombre </th>
+    <td mat-cell *matCellDef="let costumer"> {{costumer.name}} </td>
+  </ng-container>
+  <ng-container matColumnDef="lastName">
+    <th mat-header-cell *matHeaderCellDef> Apellido Paterno </th>
+    <td mat-cell *matCellDef="let costumer"> {{costumer.lastName}} </td>
+  </ng-container>
+  <ng-container matColumnDef="middleName">
+    <th mat-header-cell *matHeaderCellDef> Apellido Materno </th>
+    <td mat-cell *matCellDef="let costumer"> {{costumer.middleName}} </td>
+  </ng-container>
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef> Correo Electronico </th>
+    <td mat-cell *matCellDef="let costumer"> {{costumer.email}} </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr
+   mat-row
+   (click)="costumerDetails(costumer.id)"
+    *matRowDef="let costumer; columns: displayedColumns;"></tr>
+</table>
+
+
+
+
+
+
+<!-- <div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Lista de Clientes</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-stripped">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido Paterno</th>
+          <th>Apellido Materno</th>
+          <th>Correo Electronico</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let costumer of costumers | async">
+          <td>{{ costumer.name }}</td>
+          <td>{{ costumer.middleName }}</td>
+          <td>{{ costumer.lastName }}</td>
+          <td>{{ costumer.email }}</td>
+          <td>
+            <button (click)="deleteCostumer(costumer.id)" class="btn btn-danger">Borrar</button>
+            <button (click)="costumerDetails(costumer.id)" class="btn btn-info" style="margin-left: 10px">Detalles</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> -->
